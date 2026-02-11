@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offer Guest Lecture</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 45px;
+            border-radius: 20px;
+            text-align: center;
+            width: 420px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .icon {
+            font-size: 65px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #00f2fe;
+            color: #141e30;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.08);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="icon">🎤</div>
+        <h1>Offer Guest Lecture</h1>
+        <p>Inspire and guide students by sharing your knowledge, experience, and industry insights through guest lectures.</p>
+        <a href="contribution.html" class="btn">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>

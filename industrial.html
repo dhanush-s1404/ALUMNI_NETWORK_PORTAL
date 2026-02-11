@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offer Industrial Visit</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 420px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: white;
+            color: #11998e;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #d4fc79;
+            transform: scale(1.05);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="icon">🏭</div>
+        <h1>Offer Industrial Visit</h1>
+        <p>Help students explore real industrial environments and understand practical applications of their studies.</p>
+        <a href="contribution.html" class="btn">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>
