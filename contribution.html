@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alumni Contribution</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'JetBrains Mono', monospace;
+    background: linear-gradient(135deg,#fdeff9,#ecf2ff);
+    text-align:center;
+}
+
+h1{
+    color:#b455c5;
+    margin-top:40px;
+}
+
+.subtitle{
+    color:#555;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#fff;
+    width:260px;
+    height:180px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+    color:#000;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:15px;
+    background:linear-gradient(135deg,#ff5acb,#7a6cff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:26px;
+    margin-bottom:15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Alumni Contribution</h1>
+<p class="subtitle">Support students & share your expertise</p>
+
+<div class="cards">
+
+    <a href="internship.html" class="card">
+        <div class="icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Offer Internship</h3>
+    </a>
+
+    <a href="industrial-visit.html" class="card">
+        <div class="icon"><i class="fa-solid fa-industry"></i></div>
+        <h3>Offer Industrial Visit</h3>
+    </a>
+
+    <a href="guest-lecture.html" class="card">
+        <div class="icon"><i class="fa-solid fa-microphone"></i></div>
+        <h3>Offer Guest Lecture</h3>
+    </a>
+
+</div>
+
+</body>
+</html>

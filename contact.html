@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us | Hindusthan College</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:#333;
+}
+
+/* Decorative background circles */
+body::before, body::after{
+    content:'';
+    position:fixed;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    z-index:-1;
+}
+body::before{ top:-100px; left:-100px; }
+body::after{ bottom:-120px; right:-120px; }
+
+.container{
+    max-width:1150px;
+    margin:50px auto;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#fff;
+    font-size:36px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#dfe9ff;
+    margin-bottom:50px;
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h2{
+    color:#2a5298;
+    margin-bottom:20px;
+}
+
+.info-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.info-item i{
+    font-size:20px;
+    color:#1e90ff;
+    margin-top:4px;
+}
+
+form input, form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:14px;
+}
+
+form textarea{
+    height:120px;
+    resize:none;
+}
+
+form button{
+    background:linear-gradient(135deg,#1e90ff,#00c6ff);
+    color:#fff;
+    border:none;
+    padding:14px;
+    width:100%;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 15px rgba(30,144,255,0.4);
+}
+
+/* Map */
+.map-section{
+    margin-top:50px;
+}
+
+.map-section h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.map{
+    height:360px;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    color:#dfe9ff;
+    margin:40px 0 10px;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <p class="subtitle">Hindusthan College of Science and Commerce</p>
+
+    <div class="contact-wrapper">
+
+        <!-- Contact Info -->
+        <div class="card">
+            <h2>Get in Touch</h2>
+
+            <div class="info-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <strong>Address</strong><br>
+                    Perundurai - Chennimalai Road,<br>
+                    Ingur, Perundurai,<br>
+                    Tamil Nadu – 638052
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <strong>Phone</strong><br>
+                    04294-232323
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-headset"></i>
+                <div>
+                    <strong>Helpline</strong><br>
+                    +91-9003753332
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong>Email</strong><br>
+                    admission@hindusthan.net
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-globe"></i>
+                <div>
+                    <strong>Website</strong><br>
+                    www.hindusthan.net
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+            <h2>Send Message</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Map -->
+    <div class="map-section">
+        <h2>Our Location</h2>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps?q=Hindusthan%20College%20of%20Science%20and%20Commerce&output=embed"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Hindusthan College of Science and Commerce
+</footer>
+
+</body>
+</html>

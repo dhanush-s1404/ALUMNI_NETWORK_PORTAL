@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About HISAC</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+<style>
+/* ===== GLOBAL ===== */
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== MAIN CARD ===== */
+.about-wrapper{
+    max-width:900px;
+    padding:3rem;
+    border-radius:28px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    color:#fff;
+    position:relative;
+    animation: slideUp 1.1s ease;
+}
+
+/* Animated border glow */
+.about-wrapper::before{
+    content:'';
+    position:absolute;
+    inset:-2px;
+    border-radius:30px;
+    background: linear-gradient(120deg,#60a5fa,#a78bfa,#22d3ee);
+    z-index:-1;
+    animation: borderMove 6s linear infinite;
+}
+
+/* ===== TITLE ===== */
+.about-wrapper h1{
+    font-size:2.6rem;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:1rem;
+    background: linear-gradient(90deg,#93c5fd,#e9d5ff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.about-wrapper p.intro{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 2.5rem;
+    font-size:1rem;
+    line-height:1.8;
+    opacity:0.9;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* ===== INFO CARDS ===== */
+.info-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:1.8rem;
+}
+
+.info-card{
+    background: rgba(255,255,255,0.15);
+    padding:2rem;
+    border-radius:22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.info-card::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: linear-gradient(120deg,transparent,rgba(255,255,255,0.2),transparent);
+    transform:translateX(-100%);
+    transition:0.6s;
+}
+
+.info-card:hover::after{
+    transform:translateX(100%);
+}
+
+.info-card:hover{
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:0 30px 60px rgba(14, 101, 208, 0.45);
+}
+
+.icon{
+    font-size:2.2rem;
+    margin-bottom:1rem;
+}
+
+.info-card h3{
+    font-size:1.3rem;
+    margin-bottom:0.6rem;
+}
+
+.info-card p{
+    font-size:0.95rem;
+    line-height:1.7;
+    opacity:0.9;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideUp{
+    from{opacity:0; transform: translateY(50px);}
+    to{opacity:1; transform: translateY(0);}
+}
+
+@keyframes borderMove{
+    0%{filter:hue-rotate(0deg);}
+    100%{filter:hue-rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="about-wrapper">
+    <h1>About HISAC</h1>
+
+    <p class="intro">
+        Hindusthan College of Science and Commerce was established in 2023 with the
+        objective of delivering quality education to rural students, shaping them
+        into competent graduates. The institution offers diverse Arts and Science
+        programs and is affiliated with Bharathiar University.
+    </p>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="icon">🎓</div>
+            <h3>Our Profile</h3>
+            <p>
+                HISAC focuses on academic excellence, skill development,
+                and holistic learning for students from diverse backgrounds.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🌟</div>
+            <h3>Our Vision</h3>
+            <p>
+                To provide quality education to rural students and transform
+                them into capable, confident, and career-ready graduates.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">🚀</div>
+            <h3>Our Mission</h3>
+            <p>
+                To guide learners along the paths of knowledge and wisdom by
+                nurturing self-growth, entrepreneurship, and social responsibility.
+            </p>
+        </div>
+        <div class="info-card">
+    <div class="icon">📄</div>
+    <h3>Mandatory Disclosure</h3>
+    <p>
+        As per AICTE / University norms, the institution hereby provides
+        complete mandatory disclosure information for public access.
+    </p>
+
+    <a href="mandatory-disclosure.pdf" target="_blank" class="pdf-btn">
+        View Mandatory Disclosure (PDF)
+    </a>
+</div>
+
+    </div>
+</div>
+
+</body>
+</html>
