@@ -6,60 +6,87 @@
 <title>Industrial Visits – HISAC</title>
 
 <style>
-  body{
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 0;
-  }
 
-  .visits{
-    max-width: 900px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  }
+/* ===== PREMIUM BACKGROUND ===== */
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #1e3a8a, #0f172a 60%);
+  padding:60px 20px;
+  color:white;
+}
 
-  .visits h2{
-    color: #0b3c6d;
-    border-left: 5px solid #0b3c6d;
-    padding-left: 12px;
-    margin-bottom: 20px;
-  }
+/* ===== SECTION CONTAINER ===== */
+.visits{
+  max-width:1100px;
+  margin:auto;
+}
 
-  .visits ul{
-    list-style: none;
-    padding: 0;
-  }
+/* ===== TITLE ===== */
+.visits h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:50px;
+  letter-spacing:1px;
+}
 
-  .visits li{
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    background: #f1f4f9;
-    border-radius: 6px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
+/* ===== GRID LAYOUT ===== */
+.visit-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
 
-  .visits li span{
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-top: 4px;
-  }
+/* ===== GLASS CARD ===== */
+.visit-card{
+  padding:30px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 0 20px rgba(37,99,235,0.2);
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
 
-  .visits li:hover{
-    background: #e6eef9;
-  }
+.visit-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 35px rgba(37,99,235,0.6);
+}
 
-  .note{
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-    font-style: italic;
-  }
+/* Neon Accent Line */
+.visit-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#00f2fe,#2563eb,#00f2fe);
+}
+
+/* ===== TEXT ===== */
+.visit-card h3{
+  margin-top:0;
+  font-size:20px;
+  margin-bottom:12px;
+}
+
+.visit-card p{
+  font-size:15px;
+  line-height:1.6;
+  opacity:0.9;
+}
+
+/* ===== NOTE ===== */
+.note{
+  text-align:center;
+  margin-top:40px;
+  font-size:14px;
+  opacity:0.7;
+}
+
 </style>
 </head>
 
@@ -67,36 +94,38 @@
 
 <section class="visits">
 
-  <h2>Industrial Visits – HISAC</h2>
+  <h2>🏭 Industrial Visits – HISAC</h2>
 
-  <ul>
-    <li>
-      IT Industry Visit
-      <span>Exposure to software development processes, corporate culture, and IT infrastructure</span>
-    </li>
+  <div class="visit-grid">
 
-    <li>
-      Manufacturing Industry Visit
-      <span>Learning about production flow, quality assurance, and industrial safety standards</span>
-    </li>
+    <div class="visit-card">
+      <h3>💻 IT Industry Visit</h3>
+      <p>Exposure to software development processes, corporate culture, agile workflows, and IT infrastructure.</p>
+    </div>
 
-    <li>
-      Banking & Financial Institution Visit
-      <span>Understanding banking operations, accounting systems, and financial services</span>
-    </li>
+    <div class="visit-card">
+      <h3>🏗 Manufacturing Industry Visit</h3>
+      <p>Learning about production flow, quality assurance systems, and industrial safety standards.</p>
+    </div>
 
-    <li>
-      Startup & Innovation Hub Visit
-      <span>Interaction with entrepreneurs and insights into startups and business innovation</span>
-    </li>
+    <div class="visit-card">
+      <h3>🏦 Banking & Financial Institution</h3>
+      <p>Understanding banking operations, accounting systems, financial services, and digital banking.</p>
+    </div>
 
-    <li>
-      Technology Park / Data Center Visit
-      <span>Hands-on knowledge of cloud computing, networking, and data security</span>
-    </li>
-  </ul>
+    <div class="visit-card">
+      <h3>🚀 Startup & Innovation Hub</h3>
+      <p>Interaction with entrepreneurs and insights into startups, incubation centers, and innovation ecosystems.</p>
+    </div>
 
-  <p class="note">Industrial visits are organized to provide practical exposure and industry-oriented learning.</p>
+    <div class="visit-card">
+      <h3>☁ Technology Park / Data Center</h3>
+      <p>Hands-on exposure to cloud computing, networking architecture, and data security practices.</p>
+    </div>
+
+  </div>
+
+  <p class="note">Industrial visits provide practical exposure and bridge classroom knowledge with real-world industry experience.</p>
 
 </section>
 

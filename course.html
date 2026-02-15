@@ -6,83 +6,266 @@
 <title>Programmes Offered</title>
 
 <style>
-  body{
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 0;
-  }
 
-  .programmes{
-    max-width: 900px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  }
+/* ===== BACKGROUND ===== */
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #1e3a8a, #0f172a 60%);
+  padding:60px 20px;
+  color:white;
+}
 
-  .programmes h2{
-    color: #0b3c6d;
-    border-left: 5px solid #0b3c6d;
-    padding-left: 10px;
-    margin-bottom: 15px;
-  }
+/* ===== TITLE ===== */
+h1{
+  text-align:center;
+  margin-bottom:50px;
+  font-weight:600;
+  letter-spacing:1px;
+}
 
-  .programmes ul{
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-  }
+/* ===== TABS ===== */
+.tabs{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-bottom:50px;
+}
 
-  .programmes li{
-    padding: 10px 15px;
-    margin-bottom: 8px;
-    background: #f1f4f9;
-    border-radius: 6px;
-    font-size: 16px;
-  }
+.tab{
+  padding:12px 30px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  cursor:pointer;
+  transition:0.3s;
+}
 
-  .programmes li:hover{
-    background: #e6eef9;
-  }
+.tab.active{
+  background:#2563eb;
+}
 
-  .note{
-    font-size: 14px;
-    color: #555;
-    font-style: italic;
-    margin-top: 10px;
-  }
+/* ===== GRID ===== */
+.course-container{
+  display:none;
+  max-width:1400px;
+  margin:auto;
+  grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+  gap:40px;
+}
+
+.course-container.active{
+  display:grid;
+}
+
+/* ===== GLASS CARD ===== */
+.card{
+  padding:40px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 0 25px rgba(37,99,235,0.2);
+  transition:0.4s;
+  min-height:280px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 0 40px rgba(37,99,235,0.6);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#00f2fe,#2563eb,#00f2fe);
+}
+
+/* ===== TEXT ===== */
+.card h3{
+  margin-top:0;
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+.details{
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:15px;
+  opacity:0.9;
+}
+
+.meta{
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+/* ===== BUTTON ===== */
+.apply-btn{
+  padding:12px 20px;
+  border:none;
+  border-radius:30px;
+  font-size:14px;
+  cursor:pointer;
+  background:#2563eb;
+  color:white;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.apply-btn:hover{
+  background:#00c6ff;
+  transform:scale(1.05);
+}
+
 </style>
 </head>
 
 <body>
 
-<section class="programmes">
+<h1>🎓 Programmes Offered</h1>
 
-  <h2>Under Graduate Programmes</h2>
-  <ul>
-    <li>BBA – Bachelor of Business Administration</li>
-    <li>BCom – Bachelor of Commerce</li>
-    <li>BCA – Bachelor of Computer Applications</li>
-    <li>BSc-CS – Bachelor of Science (Computer Science)</li>
-    <li>BSc-IT – Bachelor of Science (Information Technology)</li>
-    <li>BSc-AI & ML – Bachelor of Science (Artificial Intelligence and Machine Learning)</li>
-    <li>BCom-PA – Bachelor of Commerce (Professional Accounting)</li>
-    <li>BCom-CA – Bachelor of Commerce (Computer Applications)</li>
-    <li>BSc-CS (AI & DS) – Bachelor of Science (Computer Science with Artificial Intelligence and Data Science)</li>
-    <li>BCom-IT – Bachelor of Commerce (Information Technology) *</li>
-  </ul>
+<div class="tabs">
+  <div class="tab active" onclick="showTab('ug',this)">Under Graduate</div>
+  <div class="tab" onclick="showTab('pg',this)">Post Graduate</div>
+</div>
 
-  <h2>Post Graduate Programmes *</h2>
-  <ul>
-    <li>MCA – Master of Computer Applications</li>
-    <li>MBA – Master of Business Administration</li>
-  </ul>
+<!-- ================= UG COURSES ================= -->
+<div id="ug" class="course-container active">
 
-  <p class="note">* Subject to Approval</p>
+  <div class="card">
+    <div>
+      <h3>💼 BBA</h3>
+      <div class="details">Business management, leadership skills, marketing and entrepreneurship.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
 
-</section>
+  <div class="card">
+    <div>
+      <h3>📊 BCom</h3>
+      <div class="details">Accounting, finance, taxation and corporate law fundamentals.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>📘 BCom – Professional Accounting</h3>
+      <div class="details">Advanced taxation, auditing and professional accounting practices.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>💻 BCom – Computer Applications</h3>
+      <div class="details">Commerce integrated with computer applications and IT tools.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>🌐 BCom – Information Technology</h3>
+      <div class="details">Business systems with modern IT technologies.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>💻 BCA</h3>
+      <div class="details">Programming, web development, databases and software engineering.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>🖥 BSc Computer Science</h3>
+      <div class="details">Algorithms, networking, operating systems and core CS subjects.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>🌐 BSc Information Technology</h3>
+      <div class="details">Networking, cybersecurity, cloud computing and IT systems.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>🤖 BSc Artificial Intelligence & ML</h3>
+      <div class="details">AI, Machine Learning, predictive analytics and data modelling.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>📊 BSc CS (AI & Data Science)</h3>
+      <div class="details">Computer Science integrated with AI and Data Science specialization.</div>
+      <div class="meta">Duration: 3 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+</div>
+
+<!-- ================= PG COURSES ================= -->
+<div id="pg" class="course-container">
+
+  <div class="card">
+    <div>
+      <h3>🎓 MCA</h3>
+      <div class="details">Advanced computing, software architecture and full-stack development.</div>
+      <div class="meta">Duration: 2 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <h3>📈 MBA</h3>
+      <div class="details">Strategic management, HR, marketing, finance and business analytics.</div>
+      <div class="meta">Duration: 2 Years</div>
+    </div>
+    <button class="apply-btn">Apply Now</button>
+  </div>
+
+</div>
+
+<script>
+function showTab(id,element){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.course-container').forEach(c=>c.classList.remove('active'));
+  element.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
