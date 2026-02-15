@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni Profile | HISAC</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#f4f7fb;color:#0b2c4d;min-height:100vh;display:flex;flex-direction:column;}
+
+/* HEADER */
+header{background:#0b2c4d;color:#ffd700;padding:20px 5%;text-align:center;}
+header h1{font-size:28px;}
+
+/* PROFILE CARD */
+.profile-container{max-width:900px;margin:40px auto;display:grid;grid-template-columns:1fr 2fr;gap:30px;background:#fff;padding:30px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);}
+.profile-photo{text-align:center;}
+.profile-photo img{width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #f1b500;}
+.profile-info{display:flex;flex-direction:column;justify-content:center;}
+.profile-info h2{font-size:24px;margin-bottom:10px;}
+.profile-info p{font-size:16px;margin-bottom:8px;}
+.edit-btn{margin-top:15px;display:inline-block;text-decoration:none;background:#f1b500;color:#0b2c4d;font-weight:700;padding:10px 20px;border-radius:30px;transition:0.3s;}
+.edit-btn:hover{background:#94c9ef;}
+
+/* LOGIN DETAILS */
+.login-details{margin-top:40px;background:#fff;padding:20px 30px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.05);}
+.login-details h3{margin-bottom:15px;color:#f1b500;}
+.login-details p{font-size:15px;margin-bottom:8px;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .profile-container{grid-template-columns:1fr;text-align:center;}
+    .profile-info{align-items:center;}
+}
+
+/* FOOTER */
+footer{background:#0b2c4d;color:#fff;text-align:center;padding:25px;margin-top:auto;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>Your Profile</h1>
+</header>
+
+<!-- PROFILE CARD -->
+<div class="profile-container">
+    <!-- PHOTO -->
+    <div class="profile-photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTICjJMMOwcQSD3zeNu7x1u6fKleSfGImoTog&s" alt="Profile Photo">
+    </div>
+
+    <!-- INFO -->
+    <div class="profile-info">
+        <h2>Zenitsu</h2>
+        <p><strong>Alumni ID:</strong> HISAC20260215</p>
+        <p><strong>Email:</strong> zenitsu@example.com</p>
+        <p><strong>Phone:</strong> +91 90037 53332</p>
+        <p><strong>Branch:</strong> Computer Science</p>
+        <p><strong>Year of Graduation:</strong> 2026</p>
+        <a href="" class="edit-btn"><i class="fa-solid fa-pen"></i> Edit Profile</a>
+    </div>
+</div>
+
+<!-- LOGIN DETAILS -->
+<div class="login-details" style="max-width:900px;margin:0 auto;">
+    <h3>Login Details</h3>
+    <p><strong>Username:</strong> zenitsu</p>
+    <p><strong>Last Login:</strong> 15 Feb 2026, 18:00 IST</p>
+    <p><strong>Account Status:</strong> Active</p>
+    <p><strong>Password:</strong> ******** </p>
+    <p>
+       <a href="change-password.html">Change Password</a>
+    </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Hindusthan College of Science and Commerce</p>
+</footer>
+
+</body>
+</html>
