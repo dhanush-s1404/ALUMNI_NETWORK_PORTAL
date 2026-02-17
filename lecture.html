@@ -1,91 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Offer Guest Lecture</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guest Lecture | HISAC</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #141e30, #243b55);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-            overflow: hidden;
-        }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
-        .card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            padding: 45px;
-            border-radius: 20px;
-            text-align: center;
-            width: 420px;
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
-            animation: fadeIn 1.2s ease-in-out;
-        }
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        .icon {
-            font-size: 65px;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
+<style>
 
-        h1 {
-            margin-bottom: 15px;
-        }
+/* ===== GLOBAL RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        p {
-            font-size: 16px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
+body{
+    font-family:'Montserrat',sans-serif;
+    background: linear-gradient(135deg, #e6ecf5, #d4e1f5);
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
 
-        .btn {
-            text-decoration: none;
-            background: #00f2fe;
-            color: #141e30;
-            padding: 12px 28px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
-        }
+/* ===== TOP BAR ===== */
+.top-bar{
+    background:#0b2c4d;
+    color:#ffd700;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 5%;
+    font-size:14px;
+}
 
-        .btn:hover {
-            background: white;
-            transform: scale(1.08);
-        }
+.top-bar a{
+    color:#ffd700;
+    text-decoration:none;
+    margin-left:12px;
+    font-weight:600;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* ===== NAV ===== */
+nav{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px 5%;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-    </style>
+.logo img{
+    height:60px;
+}
+
+/* ===== SECTION ===== */
+.section{
+    flex:1;
+    padding:70px 5%;
+}
+
+/* ===== PAGE HEADING ===== */
+.page-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.page-heading h1{
+    font-size:38px;
+    color:#0b2c4d;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.page-heading p{
+    margin-top:10px;
+    color:#555;
+    font-size:15px;
+}
+
+/* ===== FORM CARD ===== */
+.form-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    border-top:6px solid #1e3a8a;
+    max-width:900px;
+    margin:auto;
+}
+
+.form-card h2{
+    color:#0b2c4d;
+    margin-bottom:30px;
+}
+
+/* ===== FORM GRID ===== */
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px 30px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1 / 3;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:6px;
+    color:#0b2c4d;
+    font-size:14px;
+}
+
+input, select, textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-family:'Montserrat',sans-serif;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:100px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-btn{
+    margin-top:30px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:50px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color:#fff;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s ease;
+    letter-spacing:0.5px;
+}
+
+.submit-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,99,235,0.3);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#0b2c4d;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+    .form-group.full{
+        grid-column:1;
+    }
+    .top-bar{
+        flex-direction:column;
+        gap:5px;
+        text-align:center;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <div class="icon">🎤</div>
-        <h1>Offer Guest Lecture</h1>
-        <p>Inspire and guide students by sharing your knowledge, experience, and industry insights through guest lectures.</p>
-        <a href="contribution.html" class="btn">⬅ Back to Home</a>
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div>
+        📞 +91 90037 53332 &nbsp;&nbsp; ✉ admission@hindusthan.net
     </div>
+</div>
+
+<!-- NAV WITH CENTER LOGO -->
+<nav>
+    <div class="logo">
+        <img src="logo.png" alt="HISAC Logo">
+    </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<section class="section">
+
+    <!-- BIG PAGE HEADING -->
+    <div class="page-heading">
+        <h1>Guest Lecture</h1>
+        <p>Share your expertise and inspire the next generation</p>
+    </div>
+
+    <!-- FORM CARD -->
+    <div class="form-card">
+        <h2>Lecture Details</h2>
+
+        <form>
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Speaker Name *</label>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Designation</label>
+                    <input type="text" placeholder="e.g. Senior Data Scientist">
+                </div>
+
+                <div class="form-group full">
+                    <label>Topic of the Lecture *</label>
+                    <input type="text" placeholder="e.g. Machine Learning in Healthcare" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Date *</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mode</label>
+                    <select>
+                        <option>In-person</option>
+                        <option>Online</option>
+                        <option>Hybrid</option>
+                    </select>
+                </div>
+
+                <div class="form-group full">
+                    <label>Brief Description / Abstract</label>
+                    <textarea placeholder="Share a short abstract of your talk..."></textarea>
+                </div>
+
+                <div class="form-group full">
+                    <label>Contact Email *</label>
+                    <input type="email" placeholder="speaker@email.com" required>
+                </div>
+
+            </div>
+
+            <button class="submit-btn">Submit Lecture Proposal →</button>
+        </form>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Hindusthan College of Science and Commerce
+</footer>
 
 </body>
 </html>
